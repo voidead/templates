@@ -1,0 +1,21 @@
+; frontend
+[frontend]
+user = username
+group = username
+listen = /run/php/php$php_ver-fpm-frontend.sock
+listen.owner = www-data
+listen.group = www-data
+pm = static
+pm.max_children = 16
+
+; backend
+[backend]
+user = username
+group = username
+listen = /run/php/php$php_ver-fpm-backend.sock
+listen.owner = www-data
+listen.group = www-data
+pm = ondemand
+pm.max_children = 8
+pm.process_idle_timeout = 10s
+pm.max_requests = 128
