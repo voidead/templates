@@ -1,6 +1,12 @@
 #!/bin/sh
-# chkconfig: 2345 99 01
+### BEGIN INIT INFO
+# Provides:          SoftEther
+# Required-Start:    $all
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:
 # description: SoftEther VPN Server
+### END INIT INFO
 DAEMON=/usr/local/vpnserver/vpnserver
 LOCK=/var/lock/subsys/vpnserver
 test -x $DAEMON || exit 0
