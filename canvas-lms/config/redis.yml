@@ -17,7 +17,7 @@
 
 test:
   # only tests that are exercising the integration with redis require redis to run.
-  servers:
+  url:
     - redis://localhost
   # warning: the redis database will get cleared before each test, so if you
   # use this server for anything else, make sure to set aside a database id for
@@ -25,5 +25,5 @@ test:
   db: 1
 
 production:
-  servers:
+  url:
     - redis://localhost
